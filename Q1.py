@@ -18,4 +18,18 @@ class Solution:
                 
             list_nums[i] = nums[i]
 
+        ## This is similar only except it is a bit faster in runtime
+        # for i in range(len(nums)):
+        #     # Finding the difference
+        #     diff = target - nums[i]
+
+        #     list_nums = nums[:]
+        #     list_nums[i] = "_"
+
+        #     if diff in list_nums:
+        #         return [i, list_nums.index(diff)]
+        #         break
+                
+        #     list_nums[i] = nums[i]
+
         
