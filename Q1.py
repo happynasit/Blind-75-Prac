@@ -18,7 +18,7 @@ class Solution:
                 
             list_nums[i] = nums[i]
 
-        ## This is similar only except it is a bit faster in runtime
+        # This is similar only except it is a bit faster in runtime
         # for i in range(len(nums)):
         #     # Finding the difference
         #     diff = target - nums[i]
