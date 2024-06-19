@@ -1,7 +1,7 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         """
-        Keep track of the price range from 0 and then compare and check. 
+        Keep track of the price range from 0 and compare. 
         If at any point, is the price less than the buy, then change the value of buy. Or else change max_profit to the max of both values.
         """
         max_profit = 0
