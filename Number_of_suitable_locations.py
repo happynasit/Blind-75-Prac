@@ -11,7 +11,7 @@ Note: The distance between point x and center[i] is |x - center[i]|, their absol
 Input:  center = [2, 0, 3, -4], d = 22
 Output: 5 
 Explanation:
-There are 3 suitable locations i.e {-1, 0, 1, 2, 3}.
+There are 3 suitable locations i.e. {-1, 0, 1, 2, 3}.
 1. Place a warehouse at x = -1, total distance traveled is 2 * |-1 - 2| + 2 * |-1 - 0| + 2 * |-1 - 3| + 2 * |-1 - (-4)| = 22 <= d.
 2. x = 0, total distance traveled is 2 * |0 - 2| + 2 * |0 - 0| + 2 * |0 - 3| + 2 * |0 - (-4)| = 18 <= d.
 3. x = 1, total distance traveled is 2 * |1 - 2| + 2 * |1 - 0| + 2 * |1 - 3| + 2 * |1 - (-4)| = 18 <= d.
