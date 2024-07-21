@@ -17,5 +17,7 @@ There are 3 suitable locations i.e {-1, 0, 1, 2, 3}.
 3. x = 1, total distance traveled is 2 * |1 - 2| + 2 * |1 - 0| + 2 * |1 - 3| + 2 * |1 - (-4)| = 18 <= d.
 4. x = 2, total distance traveled is 2 * |2 - 2| + 2 * |2 - 0| + 2 * |2 - 3| + 2 * |2 - (-4)| = 18 <= d.
 5. x = 3, total distance traveled is 2 * |3 - 2| + 2 * |3 - 0| + 2 * |3 - 3| + 2 * |3 - (-4)| = 22 <= d.
+
+https://www.fastprep.io/problems/amazon-number-of-suitable-locations
 """
 
