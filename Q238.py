@@ -1,8 +1,5 @@
 class Solution:
     def productExceptSelf(self, nums):
-        """
-        Used Prefix product and suffix product
-        """
         n = len(nums)
         result = [1] * n
         
