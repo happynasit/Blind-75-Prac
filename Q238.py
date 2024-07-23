@@ -1,14 +1,21 @@
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
-        answer = []
-        i = 0
-        product = 1
-        for i in range(len(nums)):
-            product *= nums[i]
-        print(product)
-        while i < len(nums):
-            res = product//nums[i]
-            print(res)
-            answer.append(res)
-            i = i + 1
-        return answer
+    def productExceptSelf(self, nums):
+        """
+        Used Prefix product and suffix product
+        """
+        n = len(nums)
+        result = [1] * n
+        
+        # First pass: calculate the products of all elements to the left of each element
+        left_product = 1
+        for i in range(n):
+            result[i] = left_product
+            left_product *= nums[i]
+        
+        # Second pass: calculate the products of all elements to the right of each element
+        right_product = 1
+        for i in range(n - 1, -1, -1):
+            result[i] *= right_product
+            right_product *= nums[i]
+        
+        return result
