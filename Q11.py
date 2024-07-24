@@ -16,7 +16,6 @@ class Solution:
             elif height[right] > height[left]:
                 right = right - 1
             else:
-                left = left + 1
                 right = right - 1 
             i = i + 1
         return max_area
