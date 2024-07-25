@@ -3,10 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        removing_elements = len(nums) - k # the index that we should start with
-        
-        to_append = nums[0: removing_elements]
-        
-        nums = nums[removing_elements: len(nums)]
-        nums.extend(to_append)
-        print(nums)
+        for _ in range(k):
+            # the value in the right
+            val = nums.pop()
+            print(val)
+            nums.insert(0, val)
+            print(nums)
