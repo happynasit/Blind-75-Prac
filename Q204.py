@@ -1,6 +1,7 @@
 class Solution:
     def countPrimes(self, n: int) -> int:
         """
+        time taken : O(Nlog(long))
         SOLUTION FOUND IN SOLUTIONS PART
         1. Create a list: Write down all the natural numbers from 2 to n.
         2. Start with 2: Since 2 is the smallest prime number, circle it.
