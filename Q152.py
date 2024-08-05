@@ -1,6 +1,7 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         # return max product of a subarray
+        
         maxSum = float('-inf')
         currentSum = 1
         
