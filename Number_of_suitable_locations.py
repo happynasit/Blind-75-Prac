@@ -21,3 +21,8 @@ There are 3 suitable locations i.e. {-1, 0, 1, 2, 3}.
 https://www.fastprep.io/problems/amazon-number-of-suitable-locations
 """
 
+
+class Solution:
+  def numberOfSuitableLocations(self, center: List[int], d: int) -> int:
+
+
