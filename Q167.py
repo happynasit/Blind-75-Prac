@@ -9,6 +9,9 @@ class Solution:
         The tests are generated such that there is exactly one solution. You may not use the same element twice.
         
         Your solution must use only constant extra space.
+
+        THIS METHOD RUNS FASTER THAN 98% !!!!!
+
         """
         left = 0
         right = len(numbers) - 1
