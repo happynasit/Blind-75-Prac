@@ -1,8 +1,12 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        nums = nums.sort()
+        
+        nums.sort()
         result = []
-        for i in range(len(nums) - 2):
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+                
             left = i + 1
             right = len(nums) - 1
 
@@ -14,9 +18,42 @@ class Solution:
                     right -=1
                 else:
                     triplet = [nums[left], nums[right], nums[i]]
-                    result.append(triplet)
-                    while left < right and nums[left] == triplet[0]:
-                        left += 1
-                    while left < right and nums[right] == triplet[1]:
-                        right -= 1
-        return result
+                    if triplet not in result:
+                        result.append(triplet)
+                    # now that we found the correct solution its best we move one of the pointers
+                    # and here moving the left one is much easier
+                    # there is a problem tho, what if the next one is the same as the current number
+                    # and the description also said no duplicates
+                    # move j until we find a point where it is not equal to the target
+                    left += 1
+                  
+        return(result)
+
+        """
+        res = []
+        nums.sort()
+
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            
+            j = i + 1
+            k = len(nums) - 1
+
+            while j < k:
+                total = nums[i] + nums[j] + nums[k]
+
+                if total > 0:
+                    k -= 1
+                elif total < 0:
+                    j += 1
+                else:
+                    res.append([nums[i], nums[j], nums[k]])
+                    j += 1
+
+                    while nums[j] == nums[j-1] and j < k:
+                        j += 1
+        
+        return res
+
+        """
