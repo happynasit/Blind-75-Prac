@@ -1,30 +1,18 @@
 class Solution:
     def intToRoman(self, num: int) -> str:
-        rom_nums = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-
+        
+        rom_nums = {1: "I",5: "V",4: "IV",10: "X",9: "IX",50: "L",40: "XL",100: "C",90: "XC",500: "D",400: "CD",1000: "M", 900: "CM"}
         rom = ''
 
         while num != 0:
-            max_so_far = min(rom_nums.values())
+            max_so_far = min(rom_nums.keys())
 
-            for i in rom_nums.values():
+            for i in rom_nums.keys():
                 if max_so_far <= i and i <= num:
                     max_so_far = i
             
-            print(max_so_far)
-           
-            rom_max = list(rom_nums.keys())[list(rom_nums.values()).index(max_so_far)]
-            rom += rom_max
+            rom += rom_nums[max_so_far]
             num = num - max_so_far
-
-        print(rom)
-            
-        rom = rom.replace('DCCCC', 'CM')
-        rom = rom.replace('CCCC', 'CD')
-        rom = rom.replace('LXXXX', 'XC')
-        rom = rom.replace('XXXX', 'XL')
-        rom = rom.replace('VIIII', 'IX')
-        rom = rom.replace('IIII', 'IV')
 
         print(rom)
 
