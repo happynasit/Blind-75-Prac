@@ -1,6 +1,6 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        
+        """
         s_dict = {}
         t_dict = {}
 
@@ -19,4 +19,14 @@ class Solution:
             if locations not in t_dict.values():
                 return False
         return True
-            
+        """
+        ss = []
+        tt = []
+
+        for i in s:
+            ss.append(s.index(i))
+
+        for j in t:
+            tt.append(t.index(j))
+
+        return ss == tt  
