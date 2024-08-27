@@ -3,8 +3,7 @@ class Solution:
         print(nums)
 
         if len(nums) == 1:
-            return False
-            
+            return False 
         locations = dict()
         for i in range(len(nums)):
             if nums[i] in locations:
