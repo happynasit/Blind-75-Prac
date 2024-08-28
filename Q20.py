@@ -1,5 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        
         opening_parenthesis = []
         opening_brackets = ('(', '[', '{')
         for letter in s:
