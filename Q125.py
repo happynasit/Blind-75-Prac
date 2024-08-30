@@ -2,6 +2,7 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
         # Remove all the non alpha numeric by simply storing the main alpha numeric 
         # in another string. and lower it
+        
         ss = ''
         for i in s:
             if i.isalnum():
